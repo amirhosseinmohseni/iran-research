@@ -13,6 +13,8 @@
     <p class="date">
       Published {{ post.publish }} by {{ post.author }}
     </p>
+    <hr>
     {% comment %} {{ post.body|truncatewords:30|linebreaks }} {% endcomment %}
   {% endfor %}
+  {% include "pagination.html" with page=page_obj %}
 {% endblock %}
