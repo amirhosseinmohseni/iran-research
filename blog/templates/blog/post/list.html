@@ -1,12 +1,12 @@
 {% extends "blog/base.html" %}
 
-{% block title %}My Blog{% endblock %}
+{% block title %}Iran Research Blog{% endblock %}
 
 {% block content %}
   <h1>Iran Research Blog</h1>
   {% for post in posts %}
     <h2>
-      <a href="{% url 'blog:post_detail' post.id %}">
+      <a href="{{ post.get_absolute_url }}">
         {{ post.title }}
       </a>
     </h2>
